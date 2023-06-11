@@ -1,4 +1,4 @@
-````markdown
+
 # API noticias
 
 Esta API permite crear, guardar, obtener y eliminar noticias, con persistencia en bases de datos MONGODB.
@@ -7,9 +7,8 @@ Esta API permite crear, guardar, obtener y eliminar noticias, con persistencia e
 
 ### Obtener la página de inicio
 
-```plaintext
+
 GET /
-```
 
 Este endpoint devuelve un mensaje de bienvenida "API SIMPLE NOTICIAS".
 
@@ -66,8 +65,7 @@ Ejemplo de respuesta:
     "title": "Título de la noticia 2",
     "description": "Descripción de la noticia 2",
     "author": "Autor de la noticia 2"
-  },
-  ...
+  }
 ]
 ```
 
@@ -135,4 +133,4 @@ Deben configurarse las siguientes variables de entorno en tu archivo .env:
 2. Ejecuta `npm install` para instalar las dependencias.
 3. Configura las variables de entorno.
 4. Ejecuta `npm start` para iniciar el servidor en modo producción.
-5. Ejecuta `npm run dev` para iniciar el servidor en modo desarrollo (
+5. Ejecuta `npm run dev` para iniciar el servidor en modo desarrollo (con nodemon)
