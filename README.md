@@ -24,7 +24,7 @@ Este endpoint permite crear una nueva noticia. Los datos de la noticia deben env
 
 - `title` (string): Título de la noticia.
 - `description` (string): Descripción de la noticia.
-- `author` (string): Autor de la noticia.
+- `autor` (string): Autor de la noticia.
 
 #### Respuesta exitosa
 
@@ -57,14 +57,16 @@ Ejemplo de respuesta:
 ```json
 [
   {
+    "_id": "648627c630762b4ece9c1889",
     "title": "Título de la noticia 1",
     "description": "Descripción de la noticia 1",
-    "author": "Autor de la noticia 1"
+    "autor": "Autor de la noticia 1"
   },
   {
+    "_id": "648627c630762b4ece9c1589",
     "title": "Título de la noticia 2",
     "description": "Descripción de la noticia 2",
-    "author": "Autor de la noticia 2"
+    "autor": "Autor de la noticia 2"
   }
 ]
 ```
@@ -89,9 +91,10 @@ Ejemplo de respuesta:
 
 ```json
 {
+  "_id": "648627c630762b4ece9c1589",
   "title": "Título de la noticia",
   "description": "Descripción de la noticia",
-  "author": "Autor de la noticia"
+  "autor": "Autor de la noticia"
 }
 ```
 
