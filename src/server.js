@@ -1,6 +1,8 @@
 const app = require("./app.js");
-const db = require('./database.js')
-app.listen(3000, () =>{
-    console.log('server running in port 300')
-    db();
-})
+const { PORT } = require("./config.js");
+const db = require("./database.js");
+app.listen(PORT, () => console.log("server runing in port ", PORT));
+
+//connect db
+
+db();
