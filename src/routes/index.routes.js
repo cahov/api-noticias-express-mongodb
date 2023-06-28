@@ -28,9 +28,10 @@ router.get("/news/:id", async (req, res) => {
 
 router.post("/news/add", async (req, res) => {
   try {
+    console.log(req.body)
     const news = News(req.body);
     await news.save();
-    res.redirect("/");
+    res.sendStatus(201);
   } catch (error) {
     if (error.code === 11000) {
       const errorMessage = "El título de la noticia ya existe";
@@ -42,20 +43,21 @@ router.post("/news/add", async (req, res) => {
   }
 });
 
-router.get("/news/delete/:id", async (req, res) => {
+router.delete("/news/:id", async (req, res) => {
   try {
+    console.log(req.params)
     await News.findByIdAndDelete(req.params.id);
-    res.redirect("/");
+    res.sendStatus(204);
   } catch (error) {
     console.log("Error al eliminar la noticia:", error);
     res.status(500).send("Error al eliminar la noticia");
   }
 });
 
-router.get("/delete/all", async (req, res) => {
+router.delete("/delete/all", async (req, res) => {
   try {
     await News.deleteMany({});
-    res.redirect("/");
+    res.sendStatus(204);
   } catch (error) {
     console.log("Error al eliminar todas las noticias:", error);
     res.status(500).send("Error al eliminar todas las noticias");

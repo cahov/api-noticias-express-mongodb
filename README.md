@@ -106,11 +106,19 @@ DELETE /news/:id
 
 Este endpoint permite eliminar una noticia basada en su ID.
 
-#### Parámetros de ruta
+#### Eliminar todas las noticias
+
+```plaintext
+DELETE /delete/all
+```
+
+Este endpoint permite eliminar todas las noticias.
+
+##### Parámetros de ruta
 
 - `id` (string): ID de la noticia a eliminar.
 
-#### Respuesta exitosa
+##### Respuesta exitosa
 
 Código de estado: 200 (OK)
 
